@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto acadêmico utilizando Bootstrap 5.3">
+  <title>Detalhar Artista | CineBootstrap</title>
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-film me-2"></i>CineBootstrap</a>
+    <a class="navbar-toggler text-decoration-none" data-bs-toggle="collapse" href="#mainNav" role="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Início</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="link" data-bs-toggle="dropdown">Entidades</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="filme-listar.html">Filmes</a></li>
+            <li><a class="dropdown-item" href="artista-listar.html">Artistas</a></li>
+            <li><a class="dropdown-item" href="ficha-listar.html">Fichas Técnicas</a></li>
+            <li><a class="dropdown-item" href="diretor-listar.html">Diretores</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link " href="componentes.html">Componentes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+
+<div class="page-header mb-4">
+  <div class="d-flex justify-content-between align-items-start gap-3">
+    <div><span class="badge text-bg-success mb-2">Registro #001</span><h1 class="h2">Fernanda Montenegro</h1>
+    <p class="text-secondary mb-0">Visualização detalhada de artista.</p></div>
+    <a href="artista-listar.html" class="btn btn-outline-secondary">Voltar</a>
+  </div>
+</div>
+<div class="card shadow-sm">
+  <div class="card-body p-4">
+    <div class="row g-4"><div class="col-md-6"><div class="detail-label">Nome completo</div><div class="fs-5">Fernanda Montenegro</div></div><div class="col-md-6"><div class="detail-label">Data de nascimento</div><div class="fs-5">1929-10-16</div></div><div class="col-md-6"><div class="detail-label">Nacionalidade</div><div class="fs-5">Brasileira</div></div><div class="col-md-6"><div class="detail-label">Profissão</div><div class="fs-5">Atriz</div></div><div class="col-md-6"><div class="detail-label">Biografia</div><div class="fs-5">Uma das maiores atrizes brasileiras.</div></div></div>
+    <hr class="my-4">
+    <div class="alert alert-info mb-0"><i class="bi bi-info-circle me-2"></i>Esta tela demonstra o componente <strong>card</strong>, grid responsivo, badges e alert.</div>
+  </div>
+</div>
+
+</main>
+<footer class="mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span><i class="bi bi-film me-2"></i>CineBootstrap — Projeto acadêmico</span>
+    <span>Bootstrap 5.3.3 • <span id="currentYear"></span></span>
+  </div>
+</footer>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

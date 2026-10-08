@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto acadêmico utilizando Bootstrap 5.3">
+  <title>Início | CineBootstrap</title>
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-film me-2"></i>CineBootstrap</a>
+    <a class="navbar-toggler text-decoration-none" data-bs-toggle="collapse" href="#mainNav" role="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" role="link" data-bs-toggle="dropdown">Entidades</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="filme-listar.html">Filmes</a></li>
+            <li><a class="dropdown-item" href="artista-listar.html">Artistas</a></li>
+            <li><a class="dropdown-item" href="ficha-listar.html">Fichas Técnicas</a></li>
+            <li><a class="dropdown-item" href="diretor-listar.html">Diretores</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link " href="componentes.html">Componentes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+
+<section class="hero p-4 p-lg-5 mb-5">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-8">
+      <span class="badge text-bg-light mb-3">Projeto acadêmico • Bootstrap</span>
+      <h1 class="display-5">CineBootstrap</h1>
+      <p class="lead">Sistema web para cadastro e consulta de filmes, artistas, fichas técnicas e diretores.</p>
+      <p class="mb-0 opacity-75">A interface foi construída com Bootstrap 5, priorizando responsividade e componentes prontos.</p>
+    </div>
+    <div class="col-lg-4 text-center">
+      <i class="bi bi-camera-reels display-1"></i>
+    </div>
+  </div>
+</section>
+
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+  <i class="bi bi-info-circle-fill fs-4 me-3"></i>
+  <div><strong>Objetivo:</strong> demonstrar a aplicação prática de um framework CSS em um projeto com entidades e telas de CRUD.</div>
+</div>
+
+<h2 class="h3 mb-4">Entidades do projeto</h2>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+  <div class="col"><div class="card entity-card"><div class="card-body">
+    <i class="bi bi-film fs-1 text-primary"></i><h3 class="h5 mt-3">Filme</h3><p class="text-secondary">Cadastro, detalhes e listagem de filmes.</p>
+    <a class="card-link" href="filme-listar.html">Acessar filmes <i class="bi bi-arrow-right"></i></a>
+  </div></div></div>
+  <div class="col"><div class="card entity-card"><div class="card-body">
+    <i class="bi bi-person-video2 fs-1 text-primary"></i><h3 class="h5 mt-3">Artista</h3><p class="text-secondary">Informações dos artistas do cinema.</p>
+    <a class="card-link" href="artista-listar.html">Acessar artistas <i class="bi bi-arrow-right"></i></a>
+  </div></div></div>
+  <div class="col"><div class="card entity-card"><div class="card-body">
+    <i class="bi bi-clipboard2-data fs-1 text-primary"></i><h3 class="h5 mt-3">Ficha Técnica</h3><p class="text-secondary">Dados técnicos e equipe de produção.</p>
+    <a class="card-link" href="ficha-listar.html">Acessar fichas <i class="bi bi-arrow-right"></i></a>
+  </div></div></div>
+  <div class="col"><div class="card entity-card"><div class="card-body">
+    <i class="bi bi-camera-reels fs-1 text-primary"></i><h3 class="h5 mt-3">Diretor</h3><p class="text-secondary">Cadastro e consulta dos diretores.</p>
+    <a class="card-link" href="diretor-listar.html">Acessar diretores <i class="bi bi-arrow-right"></i></a>
+  </div></div></div>
+</div>
+
+<section class="mt-5">
+  <div class="page-header">
+    <h2 class="h4">Componentes utilizados</h2>
+    <p class="mb-3 text-secondary">O projeto demonstra mais de 5 componentes do Bootstrap, sem utilizar elementos <code>&lt;button&gt;</code>.</p>
+    <div class="d-flex flex-wrap gap-2">
+      <span class="badge text-bg-primary">Navbar</span><span class="badge text-bg-secondary">Cards</span>
+      <span class="badge text-bg-success">Alerts</span><span class="badge text-bg-warning">Accordion</span>
+      <span class="badge text-bg-info">Carousel</span><span class="badge text-bg-dark">Modal</span>
+      <span class="badge text-bg-primary">Tabs</span><span class="badge text-bg-secondary">Pagination</span>
+      <span class="badge text-bg-success">Forms</span><span class="badge text-bg-warning">Offcanvas</span>
+    </div>
+    <a href="componentes.html" class="btn btn-outline-primary mt-4">Ver demonstração dos componentes</a>
+  </div>
+</section>
+
+</main>
+<footer class="mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span><i class="bi bi-film me-2"></i>CineBootstrap — Projeto acadêmico</span>
+    <span>Bootstrap 5.3.3 • <span id="currentYear"></span></span>
+  </div>
+</footer>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

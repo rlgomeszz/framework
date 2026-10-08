@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto acadêmico utilizando Bootstrap 5.3">
+  <title>Cadastrar Filme | CineBootstrap</title>
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-film me-2"></i>CineBootstrap</a>
+    <a class="navbar-toggler text-decoration-none" data-bs-toggle="collapse" href="#mainNav" role="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Início</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="link" data-bs-toggle="dropdown">Entidades</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="filme-listar.html">Filmes</a></li>
+            <li><a class="dropdown-item" href="artista-listar.html">Artistas</a></li>
+            <li><a class="dropdown-item" href="ficha-listar.html">Fichas Técnicas</a></li>
+            <li><a class="dropdown-item" href="diretor-listar.html">Diretores</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link " href="componentes.html">Componentes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+
+<div class="page-header mb-4">
+  <span class="badge text-bg-primary mb-2"><i class="bi-film me-1"></i> Cadastro</span>
+  <h1 class="h2">Cadastrar Filme</h1>
+  <p class="text-secondary mb-0">Preencha os dados abaixo para registrar uma nova informação.</p>
+</div>
+<form class="demo-form">
+  <div class="row g-3"><div class="col-md-6"><label class="form-label" for="titulo">Título</label><input type="text" class="form-control" id="titulo" required></div><div class="col-md-6"><label class="form-label" for="genero">Gênero</label><input type="text" class="form-control" id="genero" required></div><div class="col-md-6"><label class="form-label" for="ano-de-lancamento">Ano de lançamento</label><input type="number" class="form-control" id="ano-de-lancamento" required></div><div class="col-md-6"><label class="form-label" for="duracao-minutos">Duração (minutos)</label><input type="number" class="form-control" id="duracao-minutos" required></div><div class="col-12"><label class="form-label" for="sinopse">Sinopse</label><textarea class="form-control" id="sinopse" rows="4" required></textarea></div></div>
+  <div class="form-check mt-4">
+    <input class="form-check-input" type="checkbox" id="confirm" required>
+    <label class="form-check-label" for="confirm">Confirmo que os dados informados estão corretos.</label>
+  </div>
+  <div class="alert alert-success form-feedback d-none mt-4" role="alert"></div>
+  <div class="d-flex gap-2 mt-4">
+    <a href="filme-listar.html" class="btn btn-outline-secondary">Voltar</a>
+    <a href="#" class="btn btn-primary" onclick="this.closest('form').requestSubmit(); return false;">Salvar cadastro</a>
+  </div>
+</form>
+
+</main>
+<footer class="mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span><i class="bi bi-film me-2"></i>CineBootstrap — Projeto acadêmico</span>
+    <span>Bootstrap 5.3.3 • <span id="currentYear"></span></span>
+  </div>
+</footer>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

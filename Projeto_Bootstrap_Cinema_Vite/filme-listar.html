@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto acadêmico utilizando Bootstrap 5.3">
+  <title>Listar Filmes | CineBootstrap</title>
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-film me-2"></i>CineBootstrap</a>
+    <a class="navbar-toggler text-decoration-none" data-bs-toggle="collapse" href="#mainNav" role="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Início</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="link" data-bs-toggle="dropdown">Entidades</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="filme-listar.html">Filmes</a></li>
+            <li><a class="dropdown-item" href="artista-listar.html">Artistas</a></li>
+            <li><a class="dropdown-item" href="ficha-listar.html">Fichas Técnicas</a></li>
+            <li><a class="dropdown-item" href="diretor-listar.html">Diretores</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link " href="componentes.html">Componentes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+
+<div class="page-header mb-4">
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div><span class="badge text-bg-primary mb-2"><i class="bi-film me-1"></i> Entidade</span><h1 class="h2 mb-1">Filmes</h1>
+    <p class="text-secondary mb-0">Lista de registros cadastrados no sistema.</p></div>
+    <a href="filme-cadastrar.html" class="btn btn-primary"><i class="bi bi-plus-circle me-1"></i>Cadastrar Filme</a>
+  </div>
+</div>
+<div class="input-group mb-4">
+  <span class="input-group-text"><i class="bi bi-search"></i></span>
+  <input id="globalSearch" type="search" class="form-control" placeholder="Pesquisar nesta lista...">
+</div>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col" data-searchable>
+          <div class="card entity-card h-100">
+            <div class="card-body">
+              <span class="badge text-bg-light border mb-2">ID 001</span>
+              <h3 class="h5">Interestelar</h3>
+              <p class="text-secondary mb-3">Ficção científica</p>
+              <a class="card-link" href="filme-detalhar.html?id=1">Detalhar <i class="bi bi-arrow-right"></i></a>
+              <a class="card-link ms-3" href="filme-cadastrar.html">Editar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-searchable>
+          <div class="card entity-card h-100">
+            <div class="card-body">
+              <span class="badge text-bg-light border mb-2">ID 002</span>
+              <h3 class="h5">O Auto da Compadecida</h3>
+              <p class="text-secondary mb-3">Comédia</p>
+              <a class="card-link" href="filme-detalhar.html?id=2">Detalhar <i class="bi bi-arrow-right"></i></a>
+              <a class="card-link ms-3" href="filme-cadastrar.html">Editar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-searchable>
+          <div class="card entity-card h-100">
+            <div class="card-body">
+              <span class="badge text-bg-light border mb-2">ID 003</span>
+              <h3 class="h5">Homem-Aranha: No Aranhaverso</h3>
+              <p class="text-secondary mb-3">Animação</p>
+              <a class="card-link" href="filme-detalhar.html?id=3">Detalhar <i class="bi bi-arrow-right"></i></a>
+              <a class="card-link ms-3" href="filme-cadastrar.html">Editar</a>
+            </div>
+          </div>
+        </div></div>
+<nav class="mt-5" aria-label="Paginação">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+  </ul>
+</nav>
+
+</main>
+<footer class="mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span><i class="bi bi-film me-2"></i>CineBootstrap — Projeto acadêmico</span>
+    <span>Bootstrap 5.3.3 • <span id="currentYear"></span></span>
+  </div>
+</footer>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

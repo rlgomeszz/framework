@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto acadêmico utilizando Bootstrap 5.3">
+  <title>Componentes Bootstrap | CineBootstrap</title>
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-film me-2"></i>CineBootstrap</a>
+    <a class="navbar-toggler text-decoration-none" data-bs-toggle="collapse" href="#mainNav" role="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Início</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" role="link" data-bs-toggle="dropdown">Entidades</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="filme-listar.html">Filmes</a></li>
+            <li><a class="dropdown-item" href="artista-listar.html">Artistas</a></li>
+            <li><a class="dropdown-item" href="ficha-listar.html">Fichas Técnicas</a></li>
+            <li><a class="dropdown-item" href="diretor-listar.html">Diretores</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="componentes.html">Componentes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+
+<div class="page-header mb-4">
+  <span class="badge text-bg-primary mb-2">Parte 3 e Parte 4</span>
+  <h1 class="h2">Componentes do Bootstrap</h1>
+  <p class="text-secondary mb-0">Demonstração de componentes utilizados no projeto. A atividade solicita pelo menos 5 e não utiliza elementos <code>&lt;button&gt;</code>.</p>
+</div>
+
+<div class="accordion mb-5" id="componentsAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header"><a class="accordion-button text-decoration-none" data-bs-toggle="collapse" href="#accOne" aria-expanded="true" aria-controls="accOne">1. Accordion</a></h2>
+    <div id="accOne" class="accordion-collapse collapse show" data-bs-parent="#componentsAccordion">
+      <div class="accordion-body">Organiza conteúdos em painéis expansíveis, economizando espaço na interface.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header"><a class="accordion-button collapsed text-decoration-none" data-bs-toggle="collapse" href="#accTwo" aria-expanded="false" aria-controls="accTwo">2. Accordion em outra seção</a></h2>
+    <div id="accTwo" class="accordion-collapse collapse" data-bs-parent="#componentsAccordion"><div class="accordion-body">O mesmo componente pode conter perguntas, instruções ou informações técnicas.</div></div>
+  </div>
+</div>
+
+<h2 class="h4 mb-3">Cards</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+  <div class="col"><div class="card h-100"><div class="card-body"><span class="badge text-bg-primary">Card</span><h3 class="h5 mt-3">Filme</h3><p class="text-secondary">Cards agrupam conteúdo relacionado de forma visual.</p><a href="filme-listar.html" class="card-link">Ver filmes</a></div></div></div>
+  <div class="col"><div class="card h-100"><div class="card-body"><span class="badge text-bg-success">Card</span><h3 class="h5 mt-3">Artista</h3><p class="text-secondary">Podem conter títulos, textos, imagens e links.</p><a href="artista-listar.html" class="card-link">Ver artistas</a></div></div></div>
+  <div class="col"><div class="card h-100"><div class="card-body"><span class="badge text-bg-warning">Card</span><h3 class="h5 mt-3">Diretor</h3><p class="text-secondary">São úteis para dashboards e listagens.</p><a href="diretor-listar.html" class="card-link">Ver diretores</a></div></div></div>
+</div>
+
+<h2 class="h4 mb-3">Carousel</h2>
+<div id="demoCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <a href="#demoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></a>
+    <a href="#demoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></a>
+    <a href="#demoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></a>
+  </div>
+  <div class="carousel-inner rounded-4">
+    <div class="carousel-item active"><div class="p-5 bg-dark text-white text-center"><i class="bi bi-film display-3"></i><h3 class="mt-3">Carousel</h3><p>Permite apresentar conteúdos em slides.</p></div></div>
+    <div class="carousel-item"><div class="p-5 bg-primary text-white text-center"><i class="bi bi-person-video2 display-3"></i><h3 class="mt-3">Navegação</h3><p>Possui indicadores para mudar entre os itens.</p></div></div>
+    <div class="carousel-item"><div class="p-5 bg-secondary text-white text-center"><i class="bi bi-clipboard2-data display-3"></i><h3 class="mt-3">Responsivo</h3><p>Adapta-se a diferentes tamanhos de tela.</p></div></div>
+  </div>
+  <a class="carousel-control-prev text-decoration-none" href="#demoCarousel" data-bs-slide="prev" aria-label="Anterior"><span class="carousel-control-prev-icon"></span></a>
+  <a class="carousel-control-next text-decoration-none" href="#demoCarousel" data-bs-slide="next" aria-label="Próximo"><span class="carousel-control-next-icon"></span></a>
+</div>
+
+<h2 class="h4 mb-3">Tabs / Nav</h2>
+<ul class="nav nav-tabs mb-4" id="tabDemo">
+  <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#tab1">Bootstrap</a></li>
+  <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab2">Projeto</a></li>
+  <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab3">Apresentação</a></li>
+</ul>
+<div class="tab-content mb-5">
+  <div class="tab-pane fade show active" id="tab1"><div class="component-demo"><h3 class="h5">Bootstrap 5</h3><p class="mb-0">Framework front-end baseado em HTML, CSS e JavaScript.</p></div></div>
+  <div class="tab-pane fade" id="tab2"><div class="component-demo"><h3 class="h5">CineBootstrap</h3><p class="mb-0">Projeto com quatro entidades e telas de cadastro, detalhe e listagem.</p></div></div>
+  <div class="tab-pane fade" id="tab3"><div class="component-demo"><h3 class="h5">Demonstração</h3><p class="mb-0">A apresentação pode usar esta página para mostrar os componentes funcionando.</p></div></div>
+</div>
+
+<h2 class="h4 mb-3">Modal</h2>
+<div class="component-demo mb-5">
+  <p>O modal abre uma janela sobre a página. Aqui usamos um link estilizado para acionar o componente.</p>
+  <a class="btn btn-outline-dark" data-bs-toggle="modal" href="#exampleModal">Abrir exemplo de Modal</a>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h2 class="modal-title fs-5" id="exampleModalLabel">Modal Bootstrap</h2><a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></a></div>
+    <div class="modal-body">O modal é indicado para exibir uma informação ou interação sem sair da página atual.</div>
+    <div class="modal-footer"><a href="#" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</a></div>
+  </div></div>
+</div>
+
+<h2 class="h4 mb-3">Alert, Badge e Pagination</h2>
+<div class="alert alert-success" role="alert"><i class="bi bi-check-circle me-2"></i><strong>Alert:</strong> comunica estados, avisos e mensagens.</div>
+<p><span class="badge text-bg-primary">Badge</span> <span class="badge text-bg-success">Ativo</span> <span class="badge text-bg-warning">Destaque</span></p>
+<nav aria-label="Exemplo de paginação">
+  <ul class="pagination">
+    <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+    <li class="page-item active"><span class="page-link">1</span></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+  </ul>
+</nav>
+
+<h2 class="h4 mb-3 mt-5">Offcanvas</h2>
+<div class="component-demo">
+  <p>O Offcanvas cria um painel lateral que pode ser usado para menus e filtros.</p>
+  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasDemo" role="button" aria-controls="offcanvasDemo">Abrir painel lateral</a>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDemo" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header"><h2 class="offcanvas-title h5" id="offcanvasLabel">Painel de filtros</h2><a href="#" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></a></div>
+  <div class="offcanvas-body">Aqui poderia ficar um menu, filtro de filmes ou configurações.</div>
+</div>
+
+<section class="page-header mt-5">
+  <h2 class="h4">Resumo dos componentes</h2>
+  <div class="table-responsive">
+    <table class="table table-striped align-middle mb-0">
+      <thead><tr><th>Componente</th><th>Uso</th><th>Onde aparece</th></tr></thead>
+      <tbody>
+        <tr><td>Navbar</td><td>Navegação</td><td>Todas as páginas</td></tr>
+        <tr><td>Card</td><td>Organizar conteúdo</td><td>Listagens e início</td></tr>
+        <tr><td>Accordion</td><td>Expandir/recolher conteúdo</td><td>Esta página</td></tr>
+        <tr><td>Carousel</td><td>Slides de conteúdo</td><td>Esta página</td></tr>
+        <tr><td>Tabs</td><td>Alternar seções</td><td>Esta página</td></tr>
+        <tr><td>Modal</td><td>Janela sobreposta</td><td>Esta página</td></tr>
+        <tr><td>Alert</td><td>Mensagens</td><td>Início e detalhes</td></tr>
+        <tr><td>Pagination</td><td>Navegação entre páginas</td><td>Listagens</td></tr>
+        <tr><td>Offcanvas</td><td>Painel lateral</td><td>Esta página</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+<footer class="mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span><i class="bi bi-film me-2"></i>CineBootstrap — Projeto acadêmico</span>
+    <span>Bootstrap 5.3.3 • <span id="currentYear"></span></span>
+  </div>
+</footer>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
